@@ -10,7 +10,9 @@ function isPangram(string) {
   }
 
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
-  let regex = /\s/g
+
+  let regex = /\s/g // It's a regular expression where the \s means "match whitespace" and the g is a flag which means "global", i.e. match all whitespace, not just the first.
+
   const lowercase = string.toLowerCase().replace(regex, "")
 
   for (let i = 0; i < alphabet.length; i++) {
