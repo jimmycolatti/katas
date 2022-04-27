@@ -32,3 +32,11 @@ console.log(search(14, [7, 3, 23, 9, 14, 20, 7])) // "3,7,7,9,14"
 
 // "Should return an empty string when budget is zero"
 console.log(search(0, [6, 1, 2, 9, 2])) // ""
+
+// Other solutions
+
+const search = (budget, prices) =>
+  prices
+    .filter((v) => v <= budget)
+    .sort((a, b) => a - b)
+    .toString()
